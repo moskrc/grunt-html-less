@@ -1,6 +1,6 @@
 # Grunt HTML/LESS Boiler
 
-** A starting point for Grunt.js HTML projects/repositories (with JsHint, ImageMin and http-server).
+**A starting point for Grunt.js HTML projects/repositories (with JsHint, ImageMin and http-server).**
 
 ## Description
 
