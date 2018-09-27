@@ -13,13 +13,12 @@ module.exports = function(grunt) {
 
 		clean: {
 			dist_folder: ["dist"],
-			generated_js: ["dist/js/generated.js"],
-			generated_css: ["dist/css/style.css", "dist/css/style.css.map"]
+			generated_js: ["dist/js/generated.js"]
 		},
 
 		copy: {
 			prod: {
-				src: ["*.{png,ico,txt,html,mainfest}", "css/**/*", "fonts/**/*", "img/**/*", "!img/**/*.{{<%= globalConfig.imgToMinimize %>}}"],
+				src: ["*.{png,ico,txt,html,mainfest}", "css/**/*", "!css/generated.css*", "fonts/**/*", "img/**/*", "!img/**/*.{{<%= globalConfig.imgToMinimize %>}}"],
 				dest: "dist/"
 			}
 		},
@@ -78,7 +77,7 @@ module.exports = function(grunt) {
 				optimization: 0,
 				banner:  "/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today(\"yyyy-mm-dd hh:MM:ss\") %> */",
 				sourceMap: true,
-				sourceMapFilename: "dist/css/style.css.map",
+				sourceMapFilename: "css/generated.css.map",
 				sourceMapRootpath: "../",
 				sourceMapBasepath: function () {
 					this.sourceMapURL = this.sourceMapFilename.substr(this.sourceMapFilename.lastIndexOf("/") + 1);
@@ -86,7 +85,7 @@ module.exports = function(grunt) {
 			},
 			dev: {
 				files: {
-					"css/style.css": "less/main.less"
+					"css/generated.css": "less/main.less"
 				}
 			},
 			prod: {
@@ -94,10 +93,10 @@ module.exports = function(grunt) {
 					compress: true,
 					yuicompress: true,
 					optimization: 2,
-					sourceMapFilename: "dist/css/style.min.css.map",
+					sourceMapFilename: "dist/css/generated.min.css.map",
 				},
 				files: {
-					"dist/css/style.min.css": "less/main.less"
+					"dist/css/generated.min.css": "less/main.less"
 				}
 			}
 
@@ -109,7 +108,7 @@ module.exports = function(grunt) {
 			},
 			styles: {
 				files: ["less/**/*.less"], // which files to watch
-				tasks: ["less", ]
+				tasks: ["less:dev", ]
 			},
 			lint: {
 				files: ["<%= jshint.files %>"],

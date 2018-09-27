@@ -4,3 +4,4 @@ Thumbs.db
 .idea/*
 dist/
 css/generated.css
+css/generated.css.map
