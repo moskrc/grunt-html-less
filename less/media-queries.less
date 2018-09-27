@@ -1,0 +1,86 @@
+// Extra small screen / phone
+@screen-xs: 480px;
+@screen-xs-min: @screen-xs;
+
+// Small screen / tablet
+@screen-sm: 768px;
+@screen-sm-min: @screen-sm;
+
+// Medium screen / desktop
+@screen-md: 992px;
+@screen-md-min: @screen-md;
+
+// Large screen / wide desktop
+@screen-lg: 1200px;
+@screen-lg-min: @screen-lg;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xxs-max: (@screen-xs-min - 1);
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+
+@xxsmall:      ~"screen and (max-width: @{screen-xxs-max})";
+@xsmall:       ~"screen and (min-width: @{screen-xs-min}) and (max-width: @{screen-xs-max})";
+@small:        ~"screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+@medium:       ~"screen and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+@large:        ~"screen and (min-width: @{screen-lg-min})";
+
+@print:        ~"print";
+
+// mixins
+.media(@screen, @rules) {
+  & when (@screen = xxs) {
+    @media @xxsmall {
+      @rules();
+    }
+  }
+
+  & when (@screen = xs) {
+    @media @xsmall {
+      @rules();
+    }
+  }
+
+  & when (@screen = sm) {
+    @media @small {
+      @rules();
+    }
+  }
+
+  & when (@screen = md) {
+    @media @medium {
+      @rules();
+    }
+  }
+
+  & when (@screen = lg) {
+    @media @large {
+      @rules();
+    }
+  }
+}
+
+// how to use
+
+// .btnExample {
+//     width: 50%;
+//     color: #fff;
+
+//     .media(lg, {
+//         color: blue;
+//     });
+
+//     .media(md, {
+//         color: red;
+//     });
+
+//     .media(sm, {
+//         color: orange;
+//     });
+
+//     .media(xs, {
+//         color: green;
+//     });
+
+// }
