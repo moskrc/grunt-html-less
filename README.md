@@ -1,4 +1,6 @@
-# Grunt HTML/LESS Boiler: A starting point for Grunt.js HTML projects/repositories.
+# Grunt HTML/LESS Boiler
+
+** A starting point for Grunt.js HTML projects/repositories (with JsHint, ImageMin and http-server).
 
 ## Description
 
@@ -23,8 +25,8 @@ If you want to start a small project with LESS, ImageMin and JsHint - you are at
 Here’s a few ways to install this code:
 
 1. Download as a [`zip`].
-2. Clone it: `$ git clone https://github.com/moskrc/grunt-html-less-boiler.git`.
-3. Fork it and clone: `$ git clone git@github.com:moskrc/grunt-html-less-boiler.git`.
+2. Clone it: `$ git clone https://github.com/moskrc/grunt-html-less.git`.
+3. Fork it and clone: `$ git clone git@github.com:moskrc/grunt-html-less.git`.
 
 ## Setup
 
