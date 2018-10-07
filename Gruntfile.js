@@ -133,6 +133,6 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask("test", ["jshint"]);
-	grunt.registerTask("build", ["jshint", "clean:dist_folder", "copy:prod", "imagemin:prod", "less:prod", "concat:prod", "uglify:prod", "clean:generated_js", "clean:generated_css"]);
+	grunt.registerTask("build", ["jshint", "clean:dist_folder", "copy:prod", "imagemin:prod", "less:prod", "concat:prod", "uglify:prod", "clean:generated_js"]);
 	grunt.registerTask("default", ["less:dev", "http-server:dev", "watch"]);
 };
