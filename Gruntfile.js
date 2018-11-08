@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // add new files here
-                    'index.html.tmpl': 'index.html'
+                    'index.html': 'index.html.tmpl'
                 }
             },
             prod: {
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // add new files here
-                    'index.html.tmpl': 'index.html'
+                    'index.html': 'index.html.tmpl'
                 }
             },
 
