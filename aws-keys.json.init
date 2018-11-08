@@ -1,0 +1,6 @@
+  {
+    "AccessKeyId": "AKxxxxxxxxxx",
+    "SecretKey": "super-secret-key",
+    "Bucket": "YOUR_BUCKET",
+    "Region": "us-west-2"
+  }

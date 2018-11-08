@@ -3,5 +3,7 @@ Thumbs.db
 .DS_Store
 .idea/*
 dist/
+*.html
 css/generated.css
 css/generated.css.map
+aws-keys.json
