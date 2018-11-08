@@ -6,14 +6,25 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title></title>
 
-        <link href="css/generated.css?ver=04779b8" rel="stylesheet">
+        <!-- @if MODE='debug' -->
+        <link href="css/generated.css?ver=<!-- @echo GIT_SHORT_SHA -->" rel="stylesheet">
+        <!-- @endif -->
 
+        <!-- @if MODE='prod' -->
+        <link href="css/generated.min.css?ver=<!-- @echo GIT_SHORT_SHA -->" rel="stylesheet">
+        <!-- @endif -->
     </head>
     <body>
         <h1>Let's start!</h1>
 
         <script src="js/script.js?ver=04779b8"></script>
 
+        <!-- @if MODE='debug' -->
+        <script src="js/script.js"></script>
+        <!-- @endif -->
 
+        <!-- @if MODE='prod' -->
+        <script src="js/script.min.js?ver=<!-- @echo GIT_SHORT_SHA -->"></script>
+        <!-- @endif -->
     </body>
 </html>

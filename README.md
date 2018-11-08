@@ -11,12 +11,18 @@ If you want to start a small project with LESS, ImageMin and JsHint - you are at
 ### Packages
 
 ```bash
+    "grunt-aws-s3"
+    "grunt-contrib-clean"
+    "grunt-contrib-concat"
+    "grunt-contrib-copy"
     "grunt-contrib-imagemin"
-    "grunt-contrib-uglify"
     "grunt-contrib-jshint"
-    "grunt-contrib-watch"
     "grunt-contrib-less"
+    "grunt-contrib-uglify"
+    "grunt-contrib-watch"
+    "grunt-gitinfo"
     "grunt-http-server"
+    "grunt-preprocess"
     "jshint-stylish"
 ```
 
@@ -47,6 +53,8 @@ $ grunt test
 # this command will execute jshint command only or:
 $ grunt http-server:prod
 # this command will start http server at http://127.0.0.1:8000 for /dist/ folder
+$ grunt deploy
+# this command will deploy your project to S3
 ```
 
 ## Authors
